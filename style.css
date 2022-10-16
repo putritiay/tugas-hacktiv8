@@ -1,0 +1,621 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+/* ----------------------------- GLOBAL STYLING ----------------------------- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: white;
+  background-color: #16213e;
+}
+
+article {
+  min-height: 100vh;
+  margin: auto;
+  display: flex;
+}
+
+article#experience {
+  background-color: #e80f88;
+}
+
+article#skill {
+  background-color: #e80f88;
+}
+
+article h2 {
+  font-size: 60px;
+  text-align: center;
+  margin-bottom: 36px;
+  letter-spacing: 1px;
+}
+
+.flex-column {
+  width: 70%;
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flex-row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+input,
+textarea {
+  margin: 5px 10px;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+}
+
+input,
+textarea::placeholder {
+  font-family: "Poppins", sans-serif;
+}
+
+.round img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+}
+
+.square img {
+  margin-top: 20px;
+  width: 300px;
+  height: 300px;
+}
+
+.article {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title {
+  background-color: pink;
+}
+
+h3 {
+  font-size: 36px;
+  margin: 10px 0px;
+}
+
+h5 {
+  font-size: 48px;
+}
+
+.mb {
+  margin: 10px 0px;
+}
+
+.space {
+  letter-spacing: 1px;
+}
+
+/* ------------------------------- NAVIGATION ------------------------------- */
+
+nav {
+  background-color: #16213e;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  position: relative;
+}
+
+span {
+  color: #e80f88;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  justify-content: space-between;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  color: #e80f88;
+  font-weight: bold;
+}
+
+.navigation {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 2.5em;
+  letter-spacing: 1px;
+}
+
+.pink {
+  color: #e80f88;
+  font-weight: bold;
+}
+
+.pink:hover {
+  color: white;
+  font-weight: lighter;
+}
+
+/* -------------------------------- JUMBOTRON ------------------------------- */
+
+.jumbotron {
+  background: url(/image/bg.jpg);
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.button {
+  background-color: #e80f88;
+  width: 7em;
+  padding: 5px 10px;
+  margin-top: 20px;
+  text-align: center;
+  border-radius: 7px;
+  color: white;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #16213e;
+  text-decoration: underline;
+}
+
+.jumbotron-inner {
+  width: 70%;
+  margin: auto;
+  padding: 5em;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(22, 33, 62, 0.6);
+}
+
+.jumbotron-inner h2 {
+  font-size: 3em;
+}
+
+.display-none {
+  display: none;
+}
+
+/* ----------------------------- NAV TOGGLE ----------------------------- */
+
+.nav-toggle {
+  position: relative;
+  font-size: 21px;
+  background-color: transparent;
+  border: none;
+  right: 0;
+  display: none;
+}
+
+.nav-toggle input {
+  position: absolute;
+  width: 75px;
+  height: 35px;
+  left: -35px;
+  top: -12px;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 2;
+}
+
+/* -------------------------------- EDUCATION ------------------------------- */
+
+.grid {
+  display: grid;
+  grid-template-areas:
+    "skill-1 hacktiv skill-2"
+    "skill-1 hacktiv skill-2"
+    "skill-1 hacktiv skill-2";
+  gap: 10px;
+  padding: 10px;
+}
+
+.grid-1 {
+  grid-area: skill-1;
+}
+
+.grid-1 p {
+  width: 260px;
+  height: fit-content;
+  margin: 25px;
+  padding: 10px;
+  text-align: center;
+  background-color: rgba(232, 15, 136, 0.3);
+  border-radius: 20px;
+}
+
+.grid-2 {
+  grid-area: hacktiv;
+}
+
+.grid-2 img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+}
+
+.grid-3 {
+  grid-area: skill-2;
+}
+
+.grid-3 p {
+  width: 260px;
+  height: fit-content;
+  margin: 25px;
+  padding: 10px;
+  text-align: center;
+  background-color: rgba(232, 15, 136, 0.3);
+  border-radius: 20px;
+}
+
+/* ---------------------------------- SKILL --------------------------------- */
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+
+.bg {
+  background-color: rgba(22, 33, 62, 0.5);
+  height: fit-content;
+  padding: 20px;
+  border-radius: 50px;
+}
+
+.png img {
+  padding-top: 10px;
+  width: 400px;
+  height: 300px;
+}
+
+.skill {
+  margin: 1em 0;
+  position: relative;
+  width: 22.5em;
+}
+
+.skill-type {
+  color: white;
+  font-weight: bold;
+  font-size: 0.8em;
+  letter-spacing: 0.145em;
+  text-transform: uppercase;
+  width: 20px;
+}
+
+.skill-outer-bar,
+.skill-inner-bar {
+  height: 0.75em;
+}
+
+.skill-outer-bar {
+  margin-top: 7px;
+  background: #000;
+}
+
+.skill-inner-bar {
+  animation: fillBar 5s infinite;
+  transform: scaleX(0);
+  transform-origin: 0 0;
+}
+
+.skill-100 {
+  width: 100%;
+  background-color: orangered;
+}
+.skill-90 {
+  width: 90%;
+  background-color: dodgerblue;
+}
+.skill-80 {
+  width: 80%;
+  background-color: orange;
+}
+.skill-70 {
+  width: 70%;
+  background-color: mediumorchid;
+}
+
+@keyframes fillBar {
+  to {
+    transform: scaleX(1);
+  }
+}
+
+button {
+  margin: 0 10px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  background-color: #e80f88;
+  color: white;
+  font-size: 13px;
+  letter-spacing: 1px;
+  font-family: "Poppins", sans-serif;
+}
+
+/* --------------------------------- CONTACT -------------------------------- */
+
+#contact button {
+  width: fit-content;
+  margin-top: 10px;
+}
+
+#contact button:hover {
+  transition: all 1s ease-in-out;
+  background: #16213e;
+  text-decoration: underline;
+  border: 2px solid #e80f88;
+}
+
+/* --------------------------------- FOOTER --------------------------------- */
+footer {
+  background-color: #e80f88;
+  color: white;
+}
+
+footer h5 {
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px 0px;
+  letter-spacing: 1px;
+}
+
+footer span {
+  font-size: 16px;
+  color: #16213e;
+  font-weight: bold;
+}
+
+/* -------------------------- RESPONSIVE BREAKPOINTS -------------------------- */
+
+@media screen and (max-width: 1300px) {
+  #experience .square img {
+    width: 90%;
+  }
+
+  #education .flex-row .box p {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* nav toggle */
+
+  .nav-toggle {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: space-between;
+    width: 35px;
+    height: 20px;
+    cursor: pointer;
+
+    /* border: 2px solid white; */
+  }
+
+  .nav-toggle span {
+    background-color: white;
+    width: 31px;
+    height: 4px;
+    border-radius: 10px;
+    transition: all 0.5s;
+  }
+
+  .nav-toggle span:nth-child(3) {
+    width: 20px;
+  }
+
+  /* nav toggle animation */
+
+  .nav-toggle span:nth-child(2) {
+    transform-origin: 0 0;
+  }
+
+  .nav-toggle span:nth-child(4) {
+    transform-origin: 0 100%;
+  }
+
+  .nav-toggle input:checked ~ span:nth-child(2) {
+    background-color: #e80f88;
+    transform: rotate(45deg) translate(-3px, -1px);
+  }
+
+  .nav-toggle input:checked ~ span:nth-child(4) {
+    background-color: #e80f88;
+    transform: rotate(-45deg) translate(-2px, 0px);
+  }
+
+  .nav-toggle input:checked ~ span:nth-child(3) {
+    transform: scale(0);
+  }
+
+  /* navigation */
+
+  nav ul {
+    position: absolute;
+    right: 0;
+    height: 100vh;
+    justify-content: space-evenly;
+    flex-direction: column;
+    background-color: #16213e;
+    transform: translateX(100%);
+    transition: 1s;
+    opacity: 0;
+  }
+
+  nav ul.actived {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  /* about */
+  #about .flex-column {
+    margin: 100px auto;
+  }
+
+  #about .round img {
+    margin-bottom: 20px;
+  }
+
+  #about .flex-row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #about .flex-row .article {
+    margin: auto;
+  }
+
+  /* experience */
+
+  #experience .flex-column {
+    margin: 100px auto;
+  }
+
+  #experience .flex-row {
+    flex-direction: column;
+  }
+
+  #experience .square img {
+    display: block;
+    width: 100%;
+    margin: 15px 0px;
+  }
+
+  /* education */
+
+  #education .flex-column {
+    margin: 100px auto;
+  }
+
+  .grid {
+    grid-template-areas:
+      "hacktiv hacktiv"
+      "skill-1 skill-2"
+      "skill-1 skill-2";
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .grid-2 {
+    margin: auto;
+  }
+
+  /* skill */
+
+  #skill .flex-column {
+    margin: 100px auto;
+  }
+
+  #skill .flex-row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #skill .article {
+    margin: auto;
+  }
+
+  #skill .skills {
+    padding-bottom: 35px;
+  }
+
+  .png img {
+    padding-top: 10px;
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .grid {
+    grid-template-areas:
+      "hacktiv"
+      "skill-2"
+      "skill-1";
+  }
+
+  .grid-1 p {
+    width: 300px;
+    margin: 15px;
+  }
+
+  .grid-3 p {
+    width: 300px;
+    margin: 15px;
+  }
+
+  .skill {
+    width: 19.5em;
+  }
+
+  .png img {
+    width: 300px;
+    height: 200px;
+  }
+
+  .png {
+    padding-top: 20px;
+  }
+
+  #skill .skills {
+    padding-bottom: 25px;
+  }
+}
